@@ -1,0 +1,12 @@
+[Unit]
+Description=Spigot Backup
+After=local-fs.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/spigot backup
+User=craftbukkit
+Group=craftbukkit
+
+[Install]
+WantedBy=multi-user.target
